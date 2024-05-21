@@ -1,0 +1,25 @@
+/* .auth-card-bg {
+    background: rgba(197, 187, 187, 0.2);
+} */
+
+.card.auth-card {
+    background: rgba(255, 255, 255, 0.1);
+    width: 50%;
+    font-family: 'General Gothic', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-primary.auth-button {
+    background-color: var(--russian-violet);
+    border-color: rgba(72, 11, 80, 0.498);
+}
+
+.btn-primary.auth-button:hover {
+    background-color: rgb(139, 57, 172);
+    border-color: rgb(139, 57, 172);
+}
+
+label.auth-input {
+    margin-bottom: 2px;
+    font-family: 'General Gothic';
+    font-weight: 600;
+}
