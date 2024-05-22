@@ -18,13 +18,7 @@ const router = createBrowserRouter([
 
 
 export default function App() {
-  // return (
-  //   // <>
-  //   //   {/* <Header /> */}
-  //   //   {/* <LoginPage /> */}
-  //   //   {/* <SignupPage /> */}
-  //   // </>
-  // )
+
   return <RouterProvider router={router} />
 }
 
