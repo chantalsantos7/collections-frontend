@@ -12,7 +12,7 @@ const PasswordField = ({ name, label, placeholder, register}) => {
      <InputGroup className="mb-3">
         <Form.Control type={showPassword ? "text" : "password"}
         placeholder={placeholder}
-        {...register(name, {required: true, pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{6,20}$/})}
+        {...register(name)}
         />
         <Button 
         onClick={() => setShowPassword(!showPassword)}>
