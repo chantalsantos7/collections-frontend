@@ -4,6 +4,7 @@ import './fonts.css';
 import SignupPage from './components/SignupPage'
 import LoginPage from './components/LoginPage'
 import HomePage from './components/HomePage';
+import { AuthProvider } from './contexts/AuthContext';
 
 const router = createBrowserRouter([
   {path: "/", element: <HomePage />}, 
@@ -19,7 +20,9 @@ const router = createBrowserRouter([
 
 export default function App() {
 
-  return <RouterProvider router={router} />
+  return <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>
 }
 
 function Root() {

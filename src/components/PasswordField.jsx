@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Form, InputGroup } from 'react-bootstrap';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
 const PasswordField = ({ name, label, placeholder, register}) => {
 
@@ -21,6 +22,13 @@ const PasswordField = ({ name, label, placeholder, register}) => {
      </InputGroup>   
     </>
   )
+}
+
+PasswordField.propTypes = {
+  name: PropTypes.string,
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  register: PropTypes.func
 }
 
 export default PasswordField;

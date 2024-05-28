@@ -23,3 +23,7 @@ label.auth-input {
     font-family: 'General Gothic';
     font-weight: 600;
 }
+
+p.invalid-input {
+    color: rebeccapurple;
+}

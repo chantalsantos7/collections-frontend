@@ -2,13 +2,14 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Form from 'react-bootstrap/Form';
-import Header from './Header';
-import './css/authpages.css';
 import Container from 'react-bootstrap/esm/Container';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
+import Header from './Header';
+
+import './css/authpages.css';
+
 import PasswordField from './PasswordField';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -27,8 +28,6 @@ const SignupPage = () => {
 
 
   const onSubmit = async (data, event) => {
-    // e.preventDefault();
-    // reset();
     event.preventDefault();
     console.log(data);
     const { email, password, name } = data;
