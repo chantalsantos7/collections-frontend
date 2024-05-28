@@ -16,7 +16,6 @@ import { InputGroup } from 'react-bootstrap';
 const LoginPage = () => {
 
   const { handleLogin } = useAuth();
-  // console.log(useAuth);
   const validationSchema = yup.object({
     email: yup.string().required("Email is required").email("email must be a valid email address"),
     password: yup.string().required("Password is required")
@@ -40,7 +39,6 @@ const LoginPage = () => {
 
   return (
     <>
-      <Header />
       <Container>
         <Row>
           <Col>

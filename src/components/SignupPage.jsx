@@ -45,7 +45,6 @@ const SignupPage = () => {
 
   return (
     <>
-      <Header />
       <Container>
         <Row>
           <Col>
