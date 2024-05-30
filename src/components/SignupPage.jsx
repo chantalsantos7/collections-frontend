@@ -1,12 +1,4 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/esm/Container';
-import Col from 'react-bootstrap/esm/Col';
-import Row from 'react-bootstrap/esm/Row';
-import Header from './Header';
-
+import { Button, Card, Form, Container, Row, Col, InputGroup } from 'react-bootstrap';
 import './css/authpages.css';
 
 import PasswordField from './PasswordField';

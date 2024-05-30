@@ -1,17 +1,12 @@
 import './css/authpages.css';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Header from './Header';
-import Container from 'react-bootstrap/esm/Container';
-import Row from 'react-bootstrap/esm/Row';
-import Col from 'react-bootstrap/esm/Col';
+import { Button, Card, Form, Container, Row, Col, InputGroup } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useAuth } from '../contexts/AuthContext';
-import Form from 'react-bootstrap/Form';
+
 import PasswordField from './PasswordField';
-import { InputGroup } from 'react-bootstrap';
+
 
 const LoginPage = () => {
 
