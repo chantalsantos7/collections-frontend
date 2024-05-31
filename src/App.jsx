@@ -1,6 +1,5 @@
 import './css/site.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './css/fonts.css';
 import { createBrowserRouter, Outlet, Route, RouterProvider, Routes } from 'react-router-dom'
 import SignupPage from './components/SignupPage'

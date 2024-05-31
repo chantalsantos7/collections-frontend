@@ -1,0 +1,8 @@
+th.vt-head {
+    background-color: var(--pomp-purple);
+    /* color: white; */
+}
+
+button.table-sorter {
+    background-color: azure;
+}

@@ -53,8 +53,9 @@
     --thistle: rgb(213, 198, 224);
     --rose-quartz: rgb(170, 161, 200);
     --mountbatten-pink: rgb(150, 122, 161);
-    --russian-violet: rgb(57, 0, 64);
+    --russian-violet: rgb(59, 0, 66);
     --space-cadet: rgb(25, 42, 81);
+    --pomp-purple: #785589;
 }
 
 body {
