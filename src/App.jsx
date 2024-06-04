@@ -7,7 +7,7 @@ import LoginPage from './components/LoginPage'
 import HomePage from './components/HomePage';
 import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
-import ViewPage from './components/ViewPage/ViewPage';
+import ViewPage from './components/ViewCollectionPage/ViewPage';
 
 const router = createBrowserRouter([
   {

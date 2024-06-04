@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CookiesProvider defaultSetOptions={{ path: '/auth' }}>
+    <CookiesProvider defaultSetOptions={{ path: '/' }}>
       <App />
     </CookiesProvider>
   </React.StrictMode>,
