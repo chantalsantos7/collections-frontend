@@ -1,16 +1,21 @@
 import { useContext, createContext, useState } from "react";
 import authServices from "../services/authServices";
+import { useCookies } from "react-cookie";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
 
     const [loggedIn, setLoggedIn] = useState(false);
+    const [cookies, setCookie] = useCookies(['token']);
 
     const handleLogin = async (credentials) => {
         try {
             const response = await authServices.loginService(credentials);
             setLoggedIn(true);
+
+            setCookie('token', response.data.token)
+            // setUserId(response.data.token);
             return response;
         } catch (error) {
             console.log(error);

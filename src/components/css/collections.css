@@ -4,5 +4,6 @@ th.vt-head {
 }
 
 button.table-sorter {
-    background-color: azure;
+    background: none;
+   border: none;
 }

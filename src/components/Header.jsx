@@ -10,7 +10,7 @@ const Header = () => {
         <Navbar className='header'>
             <Container>
                 <Navbar.Brand href="#home">
-                    Name or Logo
+                    Hubs
                 </Navbar.Brand>
             </Container>
         </Navbar>

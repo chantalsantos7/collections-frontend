@@ -1,10 +1,10 @@
 export default class ResourceModel {
     constructor(resourceName, resourceCategory, resourceDateAdded, resourceLink, resourceNotes, _id) {
-        this.resourceName = resourceName;
-        this.resourceCategory = resourceCategory;
-        this.resourceDateAdded = resourceDateAdded;
-        this.resourceLink = resourceLink;
-        this.resourceNotes = resourceNotes;
+        this.name = resourceName;
+        this.category = resourceCategory;
+        this.dateAdded = resourceDateAdded;
+        this.link = resourceLink;
+        this.notes = resourceNotes;
         this._id = _id;
     }
 }

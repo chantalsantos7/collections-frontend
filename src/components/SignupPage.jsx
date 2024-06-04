@@ -15,7 +15,7 @@ const validationSchema = yup.object({
 
 const SignupPage = () => {
   const {
-    register, handleSubmit, watch, reset, formState: { errors },
+    register, handleSubmit, formState: { errors },
   } = useForm({ resolver: yupResolver(validationSchema) });
 
 
