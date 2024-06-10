@@ -3,17 +3,17 @@ import ResourceModel from '../../utils/Resource.model'
 
 const ViewTableRow = ({ resource }) => {
 
-    const { resourceName, resourceCategory, resourceDateAdded, resourceLink, resourceNotes, _id } = resource;
-    const formattedDate = new Date(resourceDateAdded).toLocaleDateString();
+    const { name, category, dateAdded, link, notes, _id } = resource;
+    const formattedDate = new Date(dateAdded).toLocaleDateString();
 
     return (
-        <>
+        <>  
             <tr>
-                <td>{resourceName}</td>
-                <td>{resourceCategory}</td>
+                <td><a href={link}>{name}</a></td>
+                <td>{category}</td>
                 <td>{formattedDate}</td>
-                <td>{resourceLink}</td>
-                <td>{resourceNotes}</td>
+                {/* <td>{link}</td> */}
+                <td>{notes}</td>
             </tr>
         </>
     )
