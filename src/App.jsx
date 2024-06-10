@@ -8,6 +8,7 @@ import HomePage from './components/HomePage';
 import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import ViewPage from './components/ViewCollectionPage/ViewPage';
+import AllCollectionsPage from './components/ViewAllCollections/AllCollectionsPage';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
       {
         path: "/collections/*",
         children: [
-          { path: "view", element: <ViewPage /> }
+          { path: "all", element: <AllCollectionsPage /> },
+          { path: "view", element: <ViewPage /> },
         ]
       }
       

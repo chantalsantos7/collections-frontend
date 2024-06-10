@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import authServices from '../services/authServices';
+import { Navigate } from 'react-router';
+import { useState } from 'react';
 
 const validationSchema = yup.object({
   email: yup.string().required("Email is required").email("Email is invalid"),
@@ -18,16 +20,18 @@ const SignupPage = () => {
     register, handleSubmit, formState: { errors },
   } = useForm({ resolver: yupResolver(validationSchema) });
 
+  const [signedUp, setSignedUp] = useState(false);
 
   const onSubmit = async (data, event) => {
     event.preventDefault();
     console.log(data);
     const { email, password, name } = data;
     const credentials = { email: email, password: password, name: name };
-    console.log(credentials)
+
     try {
       const response = await authServices.signupService(credentials);
-      console.log(response.message);
+      setSignedUp(true);
+      // console.log(response.message);
       // reset();
     } catch (error) {
       console.log("I'm getting the email error");
@@ -37,6 +41,7 @@ const SignupPage = () => {
 
   return (
     <>
+    {signedUp && <Navigate to='/auth/login' />}
       <Container>
         <Row>
           <Col>

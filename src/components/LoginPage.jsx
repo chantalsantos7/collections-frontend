@@ -6,6 +6,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useAuth } from '../contexts/AuthContext';
 
 import PasswordField from './PasswordField';
+import { useState } from 'react';
+import { Navigate } from 'react-router';
 
 
 const LoginPage = () => {
@@ -16,6 +18,7 @@ const LoginPage = () => {
     password: yup.string().required("Password is required")
   })
   const { handleSubmit, register, formState: { errors } } = useForm({ resolver: yupResolver(validationSchema) });
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const onSubmit = async (data, event) => {
     event.preventDefault();
@@ -27,13 +30,16 @@ const LoginPage = () => {
       //TODO: login service, from authContext
       const response = await handleLogin(credentials);
       console.log(response);
+      setLoggedIn(true);
     } catch (error) {
+      // window.alert("Could not log on, please try again");
       console.error(error);
     }
   }
 
   return (
     <>
+    { loggedIn && <Navigate to="/collections/all" /> }
       <Container>
         <Row>
           <Col>
@@ -59,6 +65,7 @@ const LoginPage = () => {
                     >Login</Button>
                   </div>
                 </Form>
+                {/* { <p className='login-error'>Cannot log on</p> } */}
               </Card.Body>
             </Card>
           </Col>
