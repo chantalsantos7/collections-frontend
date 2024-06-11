@@ -8,6 +8,7 @@ import { useLocation } from 'react-router'
 import ResourceModel from '../../utils/Resource.model'
 import '../css/collections.css'
 import ViewResourcesTable from './ViewResourcesTable'
+import { useSearch } from '../../hooks/useSearchHooks'
 
 const ViewPage = () => {
 
@@ -15,6 +16,11 @@ const ViewPage = () => {
   const location = useLocation();
   
   const [resourcesArray, setResourcesArray] = useState([]);
+  const { searchBarText, setSearchBarText } = useSearch();
+
+    //resourcesArray is passed by default - not sorted/preserved order of insertion
+    //check if the current element contains the SearchBarText
+    
 
   useEffect(() => {
     setCollection(location.state.collection);
@@ -26,7 +32,7 @@ const ViewPage = () => {
     const parseCollectionData = () => {
       setResourcesArray(collection.resources.map(currentResource => {
         const resource = new ResourceModel(currentResource.name, currentResource.category, currentResource.dateAdded, currentResource.link, currentResource.notes, resourceCount);
-        return <ViewTableRow resource={resource} key={resourceCount++} />
+        return resource;
       }))
     }
     
@@ -45,13 +51,13 @@ const ViewPage = () => {
             <h1 className='view-heading'>{ collection !== null ? collection.name : "Collection Name" }</h1>
           </Col>
           <Col>
-            <SearchBar />
+            <SearchBar searchBarText={searchBarText} setSearchBarText={setSearchBarText} />
           </Col>
         </Row>
         <Row>
           <Col>
             <div className='view-container'>
-              <ViewResourcesTable resourcesArray={resourcesArray} />
+              <ViewResourcesTable resourcesArray={resourcesArray} searchBarText={searchBarText} />
             </div>
 
             <Button className='btn-add'>+</Button>

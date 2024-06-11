@@ -1,3 +1,7 @@
+h1.view-heading {
+    font-family: 'General Gothic';
+}
+
 th.vt-head {
     background-color: var(--pomp-purple);
     /* color: white; */
@@ -6,4 +10,44 @@ th.vt-head {
 button.table-sorter {
     background: none;
    border: none;
+}
+
+button.btn-add, #search + button {
+    background-color: var(--pomp-purple);
+    border-color: var(--pomp-purple);
+}
+
+button.btn-add:hover, #search + button:hover {
+    background-color: var(--rose-quartz);
+    border-color: var(--rose-quartz);
+}
+
+table.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
+}
+
+td {
+ background: transparent;
+}
+  
+div.collection-card {
+    /* margin: 5px; */
+    margin-top: 2.5%;
+    background-color: var(--pomp-purple);
+}
+
+div.card-title>a {
+    color: white;
+    text-decoration: none;
+}
+
+div.card-title>a:hover {
+    color: var(--rose-quartz);
+    /* text-decoration: none; */
+}
+
+div.card-title {
+    padding: 10px;
 }

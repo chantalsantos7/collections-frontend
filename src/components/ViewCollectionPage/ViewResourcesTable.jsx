@@ -1,7 +1,18 @@
 import { Table } from "react-bootstrap"
 import TableSortButton from "./TableSortButton"
+import { useSearch } from "../../hooks/useSearchHooks";
+import ViewTableRow from "./ViewTableRow";
 
-const ViewResourcesTable = ({ resourcesArray }) => {
+const ViewResourcesTable = ({ resourcesArray, searchBarText }) => {
+
+    // const { searchBarText } = useSearch();
+
+    const resourceRows = [];
+    resourcesArray.forEach((resource, index) => {
+        if (resource.name.toLowerCase().indexOf(searchBarText.toLowerCase()) === -1) return;
+        resourceRows.push(<ViewTableRow resource={resource} key={index} />)
+    });
+
     return (
         <Table striped className='view-table'>
             <thead>
@@ -14,7 +25,7 @@ const ViewResourcesTable = ({ resourcesArray }) => {
                 </tr>
             </thead>
             <tbody>
-                {resourcesArray.length > 0 && resourcesArray}
+                {resourceRows.length > 0 && resourceRows}
 
             </tbody>
         </Table>

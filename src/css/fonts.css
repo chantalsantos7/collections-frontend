@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'General Gothic';
-    src: url('assets/fonts/general_gothic/GeneralGothic-Regular.woff2') format('woff2'),
-        url('assets/fonts/general_gothic/GeneralGothic-Regular.woff') format('woff');
+    src: url('/assets/fonts/general_gothic/GeneralGothic-Regular.woff2') format('woff2'),
+        url('/assets/fonts/general_gothic/GeneralGothic-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
     font-family: 'General Gothic';
-    src: url('assets/fonts/general_gothic/GeneralGothic-Medium.woff2') format('woff2'),
-        url('assets/fonts/general_gothic/GeneralGothic-Medium.woff') format('woff');
+    src: url('/assets/fonts/general_gothic/GeneralGothic-Medium.woff2') format('woff2'),
+        url('/assets/fonts/general_gothic/GeneralGothic-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -54,8 +54,8 @@
 
 @font-face {
     font-family: 'General Gothic';
-    src: url('assets/fonts/general_gothic/GeneralGothic-SemiBold.woff2') format('woff2'),
-        url('assets/fonts/general_gothic/GeneralGothic-SemiBold.woff') format('woff');
+    src: url('/assets/fonts/general_gothic/GeneralGothic-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/general_gothic/GeneralGothic-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
