@@ -1,6 +1,8 @@
 import { InputGroup, Form, Button } from "react-bootstrap"
 
-const SearchBar = ({ searchBarText, setSearchBarText }) => {
+const SearchBar = ({ searchState }) => {
+
+    const {searchBarText, setSearchBarText } = searchState;
 
     return (
         <>

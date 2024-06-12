@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
 
     const [loggedIn, setLoggedIn] = useState(false);
     const [cookies, setCookie] = useCookies(['token']);
+    const [user, setUser] = useState(null);
 
     const handleLogin = async (credentials) => {
         try {

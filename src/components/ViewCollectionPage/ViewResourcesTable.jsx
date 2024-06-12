@@ -5,8 +5,6 @@ import ViewTableRow from "./ViewTableRow";
 
 const ViewResourcesTable = ({ resourcesArray, searchBarText }) => {
 
-    // const { searchBarText } = useSearch();
-
     const resourceRows = [];
     resourcesArray.forEach((resource, index) => {
         if (resource.name.toLowerCase().indexOf(searchBarText.toLowerCase()) === -1) return;

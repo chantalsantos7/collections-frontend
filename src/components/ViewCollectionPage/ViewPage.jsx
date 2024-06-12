@@ -51,7 +51,7 @@ const ViewPage = () => {
             <h1 className='view-heading'>{ collection !== null ? collection.name : "Collection Name" }</h1>
           </Col>
           <Col>
-            <SearchBar searchBarText={searchBarText} setSearchBarText={setSearchBarText} />
+            <SearchBar searchState = {{searchBarText, setSearchBarText}} />
           </Col>
         </Row>
         <Row>
