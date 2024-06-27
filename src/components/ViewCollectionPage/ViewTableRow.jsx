@@ -12,7 +12,7 @@ const ViewTableRow = ({ resource }) => {
                 <td><a href={link}>{name}</a></td>
                 <td>{category}</td>
                 <td>{formattedDate}</td>
-                {/* <td>{link}</td> */}
+                <td>datePlaceholder</td>
                 <td>{notes}</td>
             </tr>
         </>

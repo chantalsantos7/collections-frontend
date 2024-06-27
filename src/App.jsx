@@ -9,6 +9,8 @@ import { AuthProvider } from './contexts/AuthContext';
 import Header from './components/Header';
 import ViewPage from './components/ViewCollectionPage/ViewPage';
 import AllCollectionsPage from './components/ViewAllCollections/AllCollectionsPage';
+import AddResourcePage from './components/ResourceForms/AddResourcePage';
+import EditResourcePage from './components/ResourceForms/EditResourcePage';
 
 const router = createBrowserRouter([
   {
@@ -28,9 +30,16 @@ const router = createBrowserRouter([
         children: [
           { path: "all", element: <AllCollectionsPage /> },
           { path: "view", element: <ViewPage /> },
+          {
+            path: "resource/*",
+            children: [
+              { path: "add", element: <AddResourcePage /> },
+              { path: "edit", element: <EditResourcePage /> }
+            ]
+          }
         ]
       }
-      
+
     ]
   },
 

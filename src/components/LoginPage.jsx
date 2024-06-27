@@ -47,9 +47,10 @@ const LoginPage = () => {
               <Card.Title className='text-center m-3 p-1'>Login</Card.Title>
               <Card.Body className='auth-card-bg'>
                 <Form onSubmit={handleSubmit(onSubmit)}>
-                  <label htmlFor="" id="email" className='auth-input'>*Email address</label>
+                  <label htmlFor="email" className='auth-input'>*Email address</label>
                   <InputGroup className='mb-3'>
                     <Form.Control
+                    id="email"  
                       placeholder='email@example.com'
                       aria-label='Email'
                       {...register("email")}

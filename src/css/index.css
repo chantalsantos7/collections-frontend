@@ -66,3 +66,123 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-Bold.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-ExtraBold.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-Regular.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-Medium.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-ExtraLight.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-Light.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-SemiBold.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Gothic';
+  src: url('src/assets/fonts/general_gothic/GeneralGothic-Black.woff2') format('woff2'),
+      url('src/assets/fonts/general_gothic/GeneralGothic-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'zt_talkbold';
+  src: url('../assets/fonts/zttalk-bold-webfont.woff2') format('woff2'),
+       url('../assets/fonts/zttalk-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'zt_talk_itabold_italic';
+  src: url('../assets/fonts/zttalk-bolditalic-webfont.woff2') format('woff2'),
+       url('../assets/fonts/zttalk-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'zt_talk_itaitalic';
+  src: url('src/assets/fonts/zttalk-italic-webfont.woff2') format('woff2'),
+       url('src/assets/fonts/zttalk-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'zt_talkmedium_italic';
+  src: url('src/assets/fonts/zttalk-mediumitalic-webfont.woff2') format('woff2'),
+       url('src/assets/fonts/zttalk-mediumitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'zt_talkregular';
+  src: url('../assets/fonts/zttalk-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/zttalk-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'zt_talksemibold_italic';
+  src: url('../assets/fonts/zttalk-semibolditalic-webfont.woff2') format('woff2'),
+       url('../assets/fonts/zttalk-semibolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
