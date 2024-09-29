@@ -29,7 +29,7 @@ const LoginPage = () => {
     try {
       //TODO: login service, from authContext
       const response = await handleLogin(credentials);
-      console.log(response);
+      // console.log(response);
       setLoggedIn(true);
     } catch (error) {
       // window.alert("Could not log on, please try again");

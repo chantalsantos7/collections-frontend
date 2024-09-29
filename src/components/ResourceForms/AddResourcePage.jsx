@@ -3,13 +3,15 @@ import { useForm } from "react-hook-form"
 import ResourceForm from "./ResourceForm";
 
 const AddResourcePage = () => {
-    const { handleSubmit } = useForm();
 
     return (
         <>
             <Container>
-                <h1>Add new resource</h1>
+                <Row className="">
+                     <h1 className="resource-title">Add new resource</h1>
+                </Row >
                 <Row className="d-flex justify-content-center">
+                   
                     <ResourceForm />
                 </Row>
             </Container>

@@ -7,10 +7,19 @@
     
 }
 
-h1 {
+h1.resource-title {
     font-family: 'zt_talkbold';
+    text-align: center;
+    margin: 10px;
+    padding-top: 5px;
 }
 
-.resource-submit {
-    width: 10%;
+.resource-form-btn {
+    background-color: var(--russian-violet);
+    border-color: var(--russian-violet);
+}
+
+.resource-form-btn:hover {
+    background-color: var(--mountbatten-pink);
+    border-color: var(--russian-violet);
 }

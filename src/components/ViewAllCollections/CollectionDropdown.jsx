@@ -15,7 +15,7 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => {
         <BsThreeDotsVertical />
     </a>
 });
-console.log("I got here")
+// console.log("I got here")
 
 const CollectionDropdown = () => {
     return (
