@@ -11,6 +11,7 @@ const ResourceForm = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const { handleSubmit, register, control } = useForm();
+    const { resource: loadedResource, setResource } = useResource();
     // optional prop - resourceData
     const [editableCategory, setEditableCategory] = useState(false);
     const [notesLength, setNotesLength] = useState(0); //use to track how many characters in notes, for running count
@@ -34,13 +35,21 @@ const ResourceForm = () => {
         setCategory(e)
     }
 
+    useEffect(() => {
+        setResource(location.state.resource)
+    }, [location.state]);
+
+
+    /*TODO: name is not passed by ResourceModel to the Resource Form? 
+    resource data can be found in ResourceForm>Location(hook)>location.state.resource
+    */
     return (
         <Form className='resource-form' onSubmit={handleSubmit(onSubmit)}>
             <Container>
                 <Row>
                     <label htmlFor="">Name</label>
                     <InputGroup className='form-input'>
-                        <Form.Control placeholder='Resource name' {...register("name")} />
+                        <Form.Control placeholder='Resource name' {...register("name")} value = {loadedResource ? loadedResource.name : null} />
                     </InputGroup>
                 </Row>
                 <Row>
@@ -57,7 +66,6 @@ const ResourceForm = () => {
 
                         }}
                        /> */}
-
                         <Controller
                             control={control}
                             name="category"
@@ -83,7 +91,7 @@ const ResourceForm = () => {
                                     <Form.Control placeholder='Resource category'
                                         onBlur={onBlur}
                                         readOnly
-                                        value={category} //Is finally getting the category data from the dropdown into the submission object, but only on the first change
+                                        value={  loadedResource ? loadedResource.category : category} //Is finally getting the category data from the dropdown into the submission object, but only on the first change
                                         // disabled={category !== 'custom'}
                                         onChange={onChange} 
                                     // {...register("category")}
@@ -91,22 +99,24 @@ const ResourceForm = () => {
                                 </>
                             )}
                         />
-                        {
-
-                        }
+                        
                     </InputGroup>
                 </Row>
                 {/* Dates are automatically calculated - add a date modified section */}
                 <Row>
                     <label htmlFor="">Resource link</label>
                     <InputGroup className='form-input'>
-                        <FormControl placeholder='Add link to resource here' {...register("link")} />
+                        <FormControl placeholder='Add link to resource here'
+                            value={loadedResource ? loadedResource.link : ''} 
+                        {...register("link")} />
                     </InputGroup>
                 </Row>
                 <Row>
                     <label htmlFor="">Notes</label>
                     <InputGroup className='form-input'>
-                        <Form.Control as="textarea" maxLength={250} {...register("notes")} />
+                        <Form.Control as="textarea" maxLength={250} {...register("notes")}
+                         value={loadedResource ? loadedResource.notes : null } />
+                         {/* TODO: setting the value to the one loaded in makes it impossible to change - defeating the purpose of the editing button */}
                     </InputGroup>
                 </Row>
                 <Row>

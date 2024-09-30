@@ -21,6 +21,7 @@ const ViewResourcesTable = ({ resourcesArray, searchBarText }) => {
                     <th className="vt-head">Date Modified <TableSortButton /></th>
                     {/* <th className='vt-head'>Link <TableSortButton /></th> */}
                     <th className='vt-head'>Notes <TableSortButton /></th>
+                    <th className="vt-head"></th>
                 </tr>
             </thead>
             <tbody>

@@ -23,7 +23,6 @@ const ViewPage = () => {
   //resourcesArray is passed by default - not sorted/preserved order of insertion
   //check if the current element contains the SearchBarText
 
-
   useEffect(() => {
     setCollection(location.state.collection);
     setCollectionId(location.state.collection._id);
